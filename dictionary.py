@@ -2,12 +2,14 @@
 import json
 from difflib import get_close_matches
 
-def get_dict():
+# load database and begin prompt
+__dictionary__ = get_dictionary()
+input_dialog()
+
+def get_dictionary():
     requestdata = "thing to get the stuff up there"
     dictionary = json.load(requestdata)
     return dictionary
-
-__dictionary__ = get_dict()
 
 def input_dialog():
     userinput = input('Enter a word for a defintion:')
